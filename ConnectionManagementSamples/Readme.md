@@ -1,25 +1,12 @@
-# Connection Management Samples
-/
-/ $Header: ConnectionSamples_README.txt 14-jun-2016.02:16:24 nbsundar Exp $
-/
-/ ConnectionSamples_README.txt
-/
-/ Copyright (c) 2016, Oracle and/or its affiliates. All rights reserved.
-/
-/   NAME
-/     ConnectionSamples_README.txt - Brief descriptions of connection 
-/     management related code samples.  
-/
-/   DESCRIPTION
-/    Refer to ConnectionSamples_README.txt for details, use-cases  and
-/    exceptions for using each of the Connection management samples. 
-/
-/   NOTES
-/    None 
-/
-/   MODIFIED   (MM/DD/YY)
-/   nbsundar    06/14/16 - Creation
-/
+# Connection Management Samples in JDBC using UCP, Universal Connection Pool
+
+Brief descriptions of connection management related code samples.
+
+|Author | Date |
+|-------|------|
+|nirmala.sundarappa|06/14/16|
+
+
 ==============================================================================
 Creating a connection is an expensive database operation which
 involves several background operations such as network communication, reading 
@@ -34,7 +21,7 @@ Oracle Database and explain use-cases to be considered while choosing the
 connection management strategy. The section below provides more details on 
 specific connection management strategy. 
 
-=========================  BEGIN ============================================
+============================================================================
 ## InternalT2Driver.sql & InternalT2Driver.java: 
 The server-side Type 2 (T2S) driver (aka KPRB driver) is for Java in the 
 database. It uses database session directly for accessing local data. 
@@ -121,6 +108,6 @@ client side pool. Note that, when UCP is used, it takes care of attaching and
 releasing server connections. There is no need to explicitly call 
 `attachServerConnection()`/`detachServerConnection()` with UCP. 
 
-==========================  END   ===========================================
+============================================================================
 
 
